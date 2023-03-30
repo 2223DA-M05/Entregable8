@@ -21,7 +21,7 @@ jobs:
       run: |
         dotnet build MyBlazorClientApp.csproj -c Release
         dotnet publish MyBlazorClientApp.csproj -c Release -o myapp-publish
-        cd myapp-publish
+        cd myapp-publish/www-root
         git init
         git config user.name ${{ secrets.USER_NAME }}
         git config user.email ${{ secrets.USER_EMAIL }}
